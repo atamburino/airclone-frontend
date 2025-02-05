@@ -25,7 +25,7 @@ import BreakfastDiningOutlinedIcon from '@mui/icons-material/BreakfastDiningOutl
 
 
 import { SpaceBar } from '@mui/icons-material';
-import ReserveCard from '../Components/ReserveCard';
+import ReserveCard from '../Components/listings/ReserveCard';
 
 
 export default function Listing() {

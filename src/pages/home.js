@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import './home.css';
-import SearchBar from '../Components/searchBar';
-import ListingCard from '../Components/ListingCard';
+import SearchBar from '../Components/search/searchBar';
+import ListingCard from '../Components/listings/ListingCard';
 import { ListingContext } from '../context/ListingContext'
 
 

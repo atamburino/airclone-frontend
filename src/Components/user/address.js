@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoggedInUser } from "../hooks/useLoggedInUser";
+import { useLoggedInUser } from "../../hooks/useLoggedInUser.js";
 
 export default function Address({ toggleEditMenu }) {
     // Call the custom hook and destructure the values

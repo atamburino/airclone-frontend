@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Menu, MenuItem } from '@mui/material';
 import { AccountCircle } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useUser } from "../context/UserContext";
+import { useUser } from "../../context/UserContext.js";
 
 // Define the UserNav component
 export default function UserNav() {

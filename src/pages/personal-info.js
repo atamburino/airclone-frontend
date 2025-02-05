@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
 import './personal-info.css';
-import '../Components/Footer';
+import '../Components/layout/Footer.js';
 
 //Legal Name
-import LegalName from "../Components/legalName";
-import LegalNameEdit from "../Components/legalNameEdit";
+import LegalName from "../Components/user/legalName";
+import LegalNameEdit from "../Components/user/legalNameEdit";
 
 //Preferred Name
-import PreferredName from "../Components/preferredName";
-import PreferredNameEdit from "../Components/preferredNameEdit";
+import PreferredName from "../Components/user/preferredName";
+import PreferredNameEdit from "../Components/user/preferredNameEdit";
 
 //Phone Number
-import PhoneNumber from "../Components/PhoneNumber";
-import PhoneNumberEdit from "../Components/PhoneNumberEdit";
+import PhoneNumber from "../Components/user/PhoneNumber";
+import PhoneNumberEdit from "../Components/user/PhoneNumberEdit";
 
 //Email Address
-import EmailAddress from '../Components/emailAddress';
-import EmailAddressEdit from '../Components/emailAddressEdit';
+import EmailAddress from '../Components/user/emailAddress';
+import EmailAddressEdit from '../Components/user/emailAddressEdit';
 
 //Address
-import Address from '../Components/address';
-import AddressEdit from '../Components/addressEdit';
+import Address from '../Components/user/address';
+import AddressEdit from '../Components/user/addressEdit';
 
 //Emergency Contact
-import EmergencyContact from '../Components/emergencyContact';
-import EmergencyContactEdit from '../Components/emergencyContactEdit';
+import EmergencyContact from '../Components/user/emergencyContact';
+import EmergencyContactEdit from '../Components/user/emergencyContactEdit';
 
 
 

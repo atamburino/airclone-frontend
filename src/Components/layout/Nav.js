@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from './Logo';  // Import the Logo component
-import UserNav from './userNav';  // Import the UserNav component
+import UserNav from '../user/userNav.js';  // Import the UserNav component
 import './Nav.css';  // Import the CSS file for styles
 
 // Define the Nav component

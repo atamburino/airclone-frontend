@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, TextField } from '@mui/material';
 import axios from 'axios';
-import { useLoggedInUser } from '../hooks/useLoggedInUser';
+import { useLoggedInUser } from '../../hooks/useLoggedInUser.js';
 
 
 export default function PreferredNameEdit({ 

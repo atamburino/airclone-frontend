@@ -4,8 +4,8 @@ import { BrowserRouter as Router } from 'react-router-dom';  // Import BrowserRo
 import { Routes, Route } from 'react-router-dom';
 import PersonalInfo from './pages/personal-info.js'
 import Home from './pages/home';
-import Footer from './Components/Footer';
-import Nav from './Components/Nav';
+import Footer from './Components/layout/Footer';
+import Nav from './Components/layout/Nav';
 import Listing from './pages/listing';
 
 function App() {
