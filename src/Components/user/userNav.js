@@ -4,7 +4,7 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { Button, Menu, MenuItem } from '@mui/material';
+import { Button, Menu, MenuItem, Divider, Typography } from '@mui/material';
 import { AccountCircle } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useUser } from "../../context/UserContext.js";
@@ -46,11 +46,19 @@ export default function UserNav() {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        sx={{
+          border: '1px solid #DDDDDD',
+          borderRadius: '21px',
+          padding: '5px 5px 5px 12px',
+          '&:hover': {
+            boxShadow: '0 2px 4px rgba(0,0,0,0.18)'
+          }
+        }}
       >
         {/* Container for the button icons */}
-        <div className="button-content">
-          <MenuIcon sx={{ fontSize: 16 }} /> {/* Hamburger menu icon */}
-          <AccountCircle sx={{ fontSize: 25 }} /> {/* User avatar icon */}
+        <div className="button-content" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <MenuIcon sx={{ fontSize: 16, color: '#222222' }} /> {/* Hamburger menu icon */}
+          <AccountCircle sx={{ fontSize: 25, color: '#717171' }} /> {/* User avatar icon */}
         </div>
       </Button>
 
@@ -80,35 +88,31 @@ export default function UserNav() {
           },
         }}
       >
-        {/* Conditional rendering without Fragments */}
-        {loggedInUser
-          ? [
-              <>
-              <MenuItem key="welcome" onClick={handleClose}>
-                Welcome, {loggedInUser.user_first_name}
-              </MenuItem>,
-              <MenuItem key="account" onClick={navAccount}>
-                Account
-              </MenuItem>
-              <MenuItem
-                key="logout"
-                onClick={() => {
-                  logOutUser();
-                  handleClose();
-                }}
-              >
-                Logout
-              </MenuItem>,
-              </>
-            ]
-          : [
-              <MenuItem key="login" onClick={handleClose}>
-                Login
-              </MenuItem>,
-              <MenuItem key="signup" onClick={handleClose}>
-                Sign up
-              </MenuItem>,
-            ]}
+        {loggedInUser ? (
+          <>
+            <MenuItem sx={{ pointerEvents: 'none' }}>
+              <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                Welcome, {loggedInUser.user_first_name}!
+              </Typography>
+            </MenuItem>
+            <Divider />
+            <MenuItem onClick={navAccount} sx={{ fontSize: '14px' }}>
+              Account
+            </MenuItem>
+            <MenuItem onClick={() => { logOutUser(); handleClose(); }} sx={{ fontSize: '14px', color: '#717171' }}>
+              Log out
+            </MenuItem>
+          </>
+        ) : (
+          <>
+            <MenuItem onClick={handleClose} sx={{ fontSize: '14px', fontWeight: 600 }}>
+              Log in
+            </MenuItem>
+            <MenuItem onClick={handleClose} sx={{ fontSize: '14px' }}>
+              Sign up
+            </MenuItem>
+          </>
+        )}
       </Menu>
     </div>
   );
