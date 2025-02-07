@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoggedInUser } from "../hooks/useLoggedInUser";
+import { useLoggedInUser } from "../../hooks/useLoggedInUser.js";
 
 /**
  * Display component for the user's phone number

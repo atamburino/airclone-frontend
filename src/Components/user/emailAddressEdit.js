@@ -2,7 +2,7 @@ import React, { useState }from 'react';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import axios from 'axios';
-import { useLoggedInUser } from '../hooks/useLoggedInUser';
+import { useLoggedInUser } from "../../hooks/useLoggedInUser.js";
 
 export default function EmailAddressEdit({ 
     toggleEditMenu,
